@@ -1,0 +1,26 @@
+<h2>Productos</h2>
+
+<div *ngFor="let producto of productos">
+  <h3>
+    <a 
+    [title]="'Detalles de ' + producto.nombre"
+    [routerLink]="['/productos',producto.id]">
+    {{producto.nombre}}    
+  </a>
+  </h3>
+  <p *ngIf="producto.descripcion">
+    Descripción: {{producto.descripcion}}
+  </p>
+
+  <button type="button" (click)="compartir()">
+    Compartir
+  </button>
+  <app-producto-alertas [producto]="producto" (notificarme)="onNotificarme()">
+  </app-producto-alertas>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
