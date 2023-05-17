@@ -1,0 +1,14 @@
+[
+  {
+    "tipo": "Nocturno",
+    "precio": 25.99
+  },
+  {
+    "tipo": "2-Días",
+    "precio": 9.99
+  },
+  {
+    "tipo": "Postal",
+    "precio": 2.99
+  }
+]
