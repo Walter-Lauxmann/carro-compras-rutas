@@ -8,3 +8,19 @@
   <span>{{ item.nombre }}</span>
   <span>{{ item.precio | currency }}</span>
 </div>
+<div class="cart-item">
+  <span>Total: </span>
+  <span>{{ total | currency }} </span>
+</div>
+
+<form [formGroup]="formularioChequeo" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" formControlName="nombre" />
+  </div>
+  <div>
+    <label for="direccion">Dirección</label>
+    <input type="text" id="direccion" formControlName="direccion" />
+  </div>
+  <button class="button" type="submit">Enviar</button>
+</form>
